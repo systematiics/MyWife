@@ -16,7 +16,7 @@ Run PowerShell from the platform-tools folder, replacing the APK path with its r
 .\adb.exe -s 192.168.1.67:5555 shell am start -n tv.cleanhome/.MainActivity
 ```
 
-Stop on any install error. A verifier failure or manufacturer HOME restriction must be investigated without disabling verification or trying repeated equivalent installers. Successful reinstallation of Tubi did not prove a new HOME app is allowed.
+Stop on any install error. A verifier failure or manufacturer HOME restriction must be investigated without disabling verification or trying repeated equivalent installers. Successful reinstallation of Tubi did not prove a new HOME app was allowed; the subsequent Clean TV 0.1 installation and direct launch succeeded on this Hisense. Default Home selection is still unverified.
 
 Alternatively, from the extracted bundle invoke build-and-install.ps1 with an explicit -Adb path. It installs and opens the app but does not set default Home or disable anything. The PowerShell helper is provided for Windows; it was not executed on the Linux build machine. Do not relax machine-wide PowerShell execution policy.
 
