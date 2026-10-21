@@ -1,4 +1,4 @@
-# Validation of Clean TV 0.2
+# Validation of Clean TV 0.3
 
 Build host: Linux, Temurin JDK 21.0.8+9 (official archive checksum verified), Gradle 8.13 (official SHA-256 verified), Android Gradle Plugin 8.9.2, Android platform/build-tools 35.0.0. TLS verification retained. Dependencies retrieved through the environment's configured proxy with the system Java trust store.
 
@@ -8,6 +8,6 @@ APK signature verified with Android apksigner: v2 signature valid, one signer. A
 
 Real-TV evidence before launcher installation: Android 12/API 31, 32-bit ARM, physical 4K display with 1920x1080 override at density 320. ADB shell and screenshots work from the user's Windows PC. Tubi's existing signed split APKs reinstalled successfully; playback and sound worked. That does NOT prove acceptance of a new HOME package.
 
-No direct cloud route to the TV is established. The user installed Clean TV 0.1 successfully, opened MainActivity, and supplied a real 1920x1080 screenshot showing the dock in the requested order and a populated app grid. Version 0.2 fixes the rectangular gray glow and overly thin default labels seen in that screenshot; its updated visual appearance is not yet verified on the TV. Physical remote navigation, app launching from Clean TV, voice/casting, input switching, Wi-Fi/SSID display, default Home selection, reboot persistence, stock launcher disabling and final closure of ADB remain unverified. Do not disable Google TV, setupwraith, or input/remote services based on these build tests.
+No direct cloud route to the TV is established. The user installed Clean TV 0.1 successfully, opened MainActivity, and supplied a real 1920x1080 screenshot showing the dock in the requested order and a populated app grid. Version 0.3 removes the large name panel, uses a smaller title and subtle app-color glow, restores normal label weights, and offers locally drawn static ambient backgrounds; its updated visual appearance is not yet verified on the TV. Physical remote navigation, app launching from Clean TV, voice/casting, input switching, Wi-Fi/SSID display, default Home selection, reboot persistence, stock launcher disabling and final closure of ADB remain unverified. Do not disable Google TV, setupwraith, or input/remote services based on these build tests.
 
 The source and output were created outside the empty /workspace/MyWife checkout. That repository's tracked files were not changed. Windows build/install helper is supplied but has not been executed on Windows. The cloud setup script has been exercised on the current prepared machine; fresh-task restoration/publication has not been independently tested.

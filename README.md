@@ -64,7 +64,7 @@ Install a full JDK 17 or newer (tested build environment described in VALIDATION
 
 Then use build-and-install.ps1 -Build -Adb C:\path\platform-tools\adb.exe. It requires an already authorized TV. A debug build made on another computer uses a different signing key; Android rejects replacing the delivered APK with a different signer. Keep the stock launcher available and return to it before uninstalling only your custom tv.cleanhome app if a signing-key change is needed. Never uninstall the stock launcher. Debug signing keys are not included in this bundle.
 
-Edit app/src/main/assets/config.json to change dock package order, greeting, or background hex color, then rebuild. For a static image wallpaper, place wallpaper.jpg in assets and rebuild. It is decoded at reduced size to limit RAM. Default is pitch black. Dock apps must have a LEANBACK_LAUNCHER activity and be enabled. The app does not edit system wallpaper.
+Edit app/src/main/assets/config.json to change dock package order, greeting, background hex color, or background_style (black, midnight, lavender or violet), then rebuild. The gradient styles are drawn locally without bitmap downloads, blur, or animation. For a static image wallpaper, place wallpaper.jpg in assets and rebuild. It is decoded at reduced size to limit RAM. Default in version 0.3 is a static lavender gradient, selected by the user. Use background_style black for pitch black. Dock apps must have a LEANBACK_LAUNCHER activity and be enabled. The app does not edit system wallpaper.
 
 ## Optional DNS and final cleanup
 
